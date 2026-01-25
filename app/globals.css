@@ -1,0 +1,144 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Shadows+Into+Light&display=swap');
+
+:root {
+  --primary-green: #006400;
+  --primary-gold: #FFD700;
+  --primary-black: #1a1a1a;
+  --earth-forest: #228B22;
+  --earth-sand: #F5DEB3;
+  --emerald: #50C878;
+  --accent-ocean: #20B2AA;
+  --accent-sunset: #FF6B6B;
+  --accent-coral: #FF7F50;
+  --luxury-gold: #D4AF37;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  color: var(--primary-black);
+  background: #ffffff;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.font-shadows {
+  font-family: 'Shadows Into Light', cursive;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary-green);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--earth-forest);
+}
+
+/* Animation utilities */
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.animate-pulse-slow {
+  animation: pulse 3s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+/* Hero gradient overlay */
+.hero-overlay {
+  background: linear-gradient(
+    135deg,
+    rgba(0, 100, 0, 0.9) 0%,
+    rgba(34, 139, 34, 0.8) 50%,
+    rgba(0, 100, 0, 0.9) 100%
+  );
+}
+
+/* Gold gradient text */
+.text-gradient-gold {
+  background: linear-gradient(135deg, #FFD700, #D4AF37, #FFD700);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Button hover effects */
+.btn-primary {
+  @apply bg-primary-gold text-primary-black font-semibold py-3 px-6 rounded-lg transition-all duration-300;
+}
+
+.btn-primary:hover {
+  @apply bg-luxury-gold transform scale-105 shadow-lg;
+}
+
+.btn-secondary {
+  @apply bg-primary-green text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300;
+}
+
+.btn-secondary:hover {
+  @apply bg-earth-forest transform scale-105 shadow-lg;
+}
+
+/* Card styles */
+.card {
+  @apply bg-white rounded-xl shadow-lg overflow-hidden transition-all duration-300;
+}
+
+.card:hover {
+  @apply transform -translate-y-2 shadow-xl;
+}
+
+/* Section padding */
+.section-padding {
+  @apply py-16 px-4 md:py-24 md:px-8;
+}
+
+/* Container */
+.container-custom {
+  @apply max-w-7xl mx-auto px-4 md:px-8;
+}
