@@ -320,7 +320,7 @@ export default function HomePage() {
             >
               <div className="aspect-[4/3] relative rounded-xl overflow-hidden">
                 <Image
-                  src="/images/gala/20250308_193633.jpg"
+                  src="/images/gala/20250308_193033.jpg"
                   alt="Gala 2025"
                   fill
                   className="object-cover"
