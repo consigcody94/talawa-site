@@ -19,6 +19,7 @@ const shadowsIntoLight = Shadows_Into_Light({
 })
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://talawa.ca'),
   title: 'Talawa | Hurricane Melissa Relief - Urgent Support Needed',
   description: 'Support Talawa Youth Development and Educational Alliance in providing Hurricane Melissa relief to Wait-A-Bit Basic School and Wait-A-Bit Primary School in Jamaica. Help us empower Black children and youth through education.',
   keywords: 'Talawa, Hurricane Melissa, Jamaica relief, education charity, Black youth empowerment, Wait-A-Bit School, Canadian charity, Jamaican charity',
