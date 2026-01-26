@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netlify Forms</title>
+</head>
+<body>
+    <!-- 
+        This file is used by Netlify to detect forms at build time.
+        It is necessary because @netlify/plugin-nextjs@5 and the App Router
+        make it difficult for Netlify to statically analyze forms in JS/TSX files.
+    -->
+
+    <!-- Contact Form -->
+    <form name="contact" netlify-honeypot="bot-field" data-netlify="true" hidden>
+        <input type="hidden" name="form-name" value="contact" />
+        <input name="bot-field" />
+        <input type="text" name="name" />
+        <input type="email" name="email" />
+        <input type="text" name="subject" />
+        <textarea name="message"></textarea>
+    </form>
+
+    <!-- Scholarship Application Form -->
+    <form name="scholarship-application" netlify-honeypot="bot-field" data-netlify="true" hidden>
+        <input type="hidden" name="form-name" value="scholarship-application" />
+        <input name="bot-field" />
+        <input type="text" name="firstName" />
+        <input type="text" name="lastName" />
+        <input type="email" name="email" />
+        <input type="tel" name="phone" />
+        <input type="text" name="address" />
+        <input type="text" name="school" />
+        <input type="text" name="program" />
+        <input type="text" name="year" />
+        <input type="text" name="gpa" />
+        <textarea name="essay"></textarea>
+        <textarea name="financialNeed"></textarea>
+        <textarea name="communityInvolvement"></textarea>
+        <input type="checkbox" name="agreeTerms" />
+    </form>
+</body>
+</html>
