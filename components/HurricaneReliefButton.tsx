@@ -39,7 +39,7 @@ export default function HurricaneReliefButton() {
           </button>
 
           {/* Main Button */}
-          <Link href="/hurricane-relief">
+          <Link href="/donate">
             <motion.div
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
