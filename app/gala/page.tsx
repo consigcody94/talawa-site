@@ -79,7 +79,7 @@ export default function GalaPage() {
             className="inline-flex items-center gap-2 bg-primary-gold/20 text-primary-gold px-4 py-2 rounded-full mb-4"
           >
             <Calendar className="w-4 h-4" />
-            <span className="text-sm font-semibold">January 24, 2026</span>
+            <span className="text-sm font-semibold">February 7, 2026 (New Date!)</span>
           </motion.div>
 
           <motion.h1
@@ -137,7 +137,8 @@ export default function GalaPage() {
                   </div>
                   <div>
                     <h3 className="font-semibold text-lg text-primary-black">Date</h3>
-                    <p className="text-gray-600">Friday, January 24, 2026</p>
+                    <p className="text-gray-600">Saturday, February 7, 2026</p>
+                    <p className="text-accent-sunset text-sm font-medium">* Postponed from January 24</p>
                   </div>
                 </div>
 
@@ -380,7 +381,7 @@ export default function GalaPage() {
               See You at the Gala!
             </h2>
             <p className="text-white/80 max-w-2xl mx-auto mb-8">
-              January 24, 2026 at Belmont Event Space, Etobicoke
+              February 7, 2026 at Belmont Event Space, Etobicoke
             </p>
             <a
               href="mailto:info@talawa.ca?subject=Gala 2026 Tickets"

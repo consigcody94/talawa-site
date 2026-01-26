@@ -140,7 +140,7 @@ export default function Gala2025Page() {
               Don&apos;t Miss Gala 2026!
             </h2>
             <p className="text-white/80 max-w-2xl mx-auto mb-8">
-              Join us on January 24, 2026 for another unforgettable evening.
+              Join us on February 7, 2026 for another unforgettable evening.
             </p>
             <Link href="/gala" className="btn-primary text-lg">
               Get Gala 2026 Tickets

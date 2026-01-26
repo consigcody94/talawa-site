@@ -287,15 +287,19 @@ export default function HomePage() {
               <div className="space-y-3 mb-8">
                 <p className="flex items-center gap-3">
                   <span className="text-primary-gold font-semibold">Date:</span>
-                  January 24, 2026
+                  February 7, 2026 <span className="text-accent-sunset text-sm">(New Date!)</span>
                 </p>
                 <p className="flex items-center gap-3">
                   <span className="text-primary-gold font-semibold">Time:</span>
-                  6:00 PM
+                  6:00 PM Reception | 7:00 PM Dinner
                 </p>
                 <p className="flex items-center gap-3">
                   <span className="text-primary-gold font-semibold">Location:</span>
                   Belmont Event Space, Etobicoke
+                </p>
+                <p className="flex items-center gap-3">
+                  <span className="text-primary-gold font-semibold">Dress:</span>
+                  Cocktail / Semi-Formal (Caribbean colors welcome!)
                 </p>
                 <p className="flex items-center gap-3">
                   <span className="text-primary-gold font-semibold">Tickets:</span>
