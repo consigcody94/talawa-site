@@ -1,13 +1,21 @@
 'use client'
 
+import { useState } from 'react'
 import { motion } from 'framer-motion'
 import Image from 'next/image'
 import Link from 'next/link'
 import DonationCard from '@/components/DonationCard'
+import GalaTicketPopup from '@/components/GalaTicketPopup'
 
 export default function GalaPage() {
+  const [isTicketPopupOpen, setIsTicketPopupOpen] = useState(false)
+
   return (
     <div className="overflow-hidden">
+      <GalaTicketPopup
+        isOpen={isTicketPopupOpen}
+        onClose={() => setIsTicketPopupOpen(false)}
+      />
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         <Image
@@ -72,9 +80,12 @@ export default function GalaPage() {
               transition={{ delay: 0.7, duration: 0.8 }}
               className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-stretch sm:items-center"
             >
-              <a href="https://www.canadahelps.org/en/charities/taibu-community-health-centre/" target="_blank" rel="noopener noreferrer" className="block w-full sm:inline-block text-center bg-gradient-to-r from-primary-gold to-yellow-400 hover:from-yellow-400 hover:to-primary-gold text-primary-black px-8 py-4 rounded-full font-bold text-lg transition-all shadow-2xl hover:shadow-primary-gold/50">
+              <button
+                onClick={() => setIsTicketPopupOpen(true)}
+                className="block w-full sm:inline-block text-center bg-gradient-to-r from-primary-gold to-yellow-400 hover:from-yellow-400 hover:to-primary-gold text-primary-black px-8 py-4 rounded-full font-bold text-lg transition-all shadow-2xl hover:shadow-primary-gold/50 cursor-pointer"
+              >
                 Buy Tickets Now
-              </a>
+              </button>
               <Link
                 href="/gala/2025"
                 className="block w-full sm:inline-block text-center bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white border-2 border-white px-8 py-4 rounded-full font-bold text-lg transition-all hover:shadow-xl"
@@ -173,9 +184,12 @@ export default function GalaPage() {
                   Purchase your tickets early through CanadaHelps and receive a tax receipt for your donation
                 </p>
                 <div className="flex justify-center">
-                  <a href="https://www.canadahelps.org/en/charities/taibu-community-health-centre/" target="_blank" rel="noopener noreferrer" className="bg-gradient-to-r from-primary-green to-earth-forest hover:from-earth-forest hover:to-primary-green text-white px-8 py-3 rounded-full font-bold text-lg shadow-lg hover:shadow-xl transition-all">
+                  <button
+                    onClick={() => setIsTicketPopupOpen(true)}
+                    className="bg-gradient-to-r from-primary-green to-earth-forest hover:from-earth-forest hover:to-primary-green text-white px-8 py-3 rounded-full font-bold text-lg shadow-lg hover:shadow-xl transition-all cursor-pointer"
+                  >
                     How to Purchase Tickets
-                  </a>
+                  </button>
                 </div>
               </div>
             </div>
@@ -319,9 +333,12 @@ export default function GalaPage() {
                 Purchase your tickets today and be part of an incredible evening that celebrates community and supports education for Black youth.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-stretch sm:items-center max-w-4xl mx-auto">
-                <a href="https://www.canadahelps.org/en/charities/taibu-community-health-centre/" target="_blank" rel="noopener noreferrer" className="block w-full sm:inline-block text-center bg-primary-green hover:bg-earth-forest text-white px-8 py-4 rounded-full font-bold text-lg sm:text-xl transition-all shadow-2xl hover:shadow-xl">
+                <button
+                  onClick={() => setIsTicketPopupOpen(true)}
+                  className="block w-full sm:inline-block text-center bg-primary-green hover:bg-earth-forest text-white px-8 py-4 rounded-full font-bold text-lg sm:text-xl transition-all shadow-2xl hover:shadow-xl cursor-pointer"
+                >
                   Buy Tickets
-                </a>
+                </button>
                 <Link
                   href="/donate"
                   className="block w-full sm:inline-block text-center bg-white hover:bg-gray-100 text-primary-green border-2 border-primary-green px-8 py-4 rounded-full font-bold text-lg sm:text-xl transition-all shadow-xl"
