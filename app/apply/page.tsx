@@ -78,12 +78,27 @@ export default function ApplyPage() {
     e.preventDefault()
     setIsSubmitting(true)
 
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 2000))
+    try {
+      const response = await fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams({
+          'form-name': 'scholarship-application',
+          ...formData,
+          agreeTerms: formData.agreeTerms.toString(),
+        }).toString(),
+      })
 
-    // In a real application, you would send this to your backend
-    console.log('Form submitted:', formData)
-    setSubmitStatus('success')
+      if (response.ok) {
+        setSubmitStatus('success')
+      } else {
+        setSubmitStatus('error')
+      }
+    } catch (error) {
+      console.error('Form submission error:', error)
+      setSubmitStatus('error')
+    }
+
     setIsSubmitting(false)
   }
 
@@ -113,6 +128,23 @@ export default function ApplyPage() {
 
   return (
     <>
+      {/* Hidden form for Netlify to detect */}
+      <form name="scholarship-application" netlify-honeypot="bot-field" data-netlify="true" hidden>
+        <input type="text" name="firstName" />
+        <input type="text" name="lastName" />
+        <input type="email" name="email" />
+        <input type="tel" name="phone" />
+        <input type="text" name="address" />
+        <input type="text" name="school" />
+        <input type="text" name="program" />
+        <input type="text" name="year" />
+        <input type="text" name="gpa" />
+        <textarea name="essay"></textarea>
+        <textarea name="financialNeed"></textarea>
+        <textarea name="communityInvolvement"></textarea>
+        <input type="checkbox" name="agreeTerms" />
+      </form>
+
       {/* Hero Section */}
       <section className="relative min-h-[50vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
@@ -244,9 +276,20 @@ export default function ApplyPage() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
+            name="scholarship-application"
+            method="POST"
+            data-netlify="true"
+            netlify-honeypot="bot-field"
             onSubmit={handleSubmit}
             className="max-w-3xl mx-auto bg-white rounded-xl shadow-lg p-8"
           >
+            <input type="hidden" name="form-name" value="scholarship-application" />
+            <p className="hidden">
+              <label>
+                Don&apos;t fill this out if you&apos;re human: <input name="bot-field" />
+              </label>
+            </p>
+
             {/* Personal Information */}
             <div className="mb-8">
               <h3 className="text-xl font-bold text-primary-black mb-4 flex items-center gap-2">

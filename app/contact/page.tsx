@@ -7,7 +7,6 @@ import Link from 'next/link'
 import {
   Mail,
   MapPin,
-  Phone,
   Clock,
   Send,
   CheckCircle,
@@ -75,20 +74,41 @@ export default function ContactPage() {
     e.preventDefault()
     setIsSubmitting(true)
 
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 1500))
+    try {
+      const response = await fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams({
+          'form-name': 'contact',
+          ...formData,
+        }).toString(),
+      })
 
-    console.log('Form submitted:', formData)
-    setSubmitStatus('success')
+      if (response.ok) {
+        setSubmitStatus('success')
+        setFormData({ name: '', email: '', subject: '', message: '' })
+      } else {
+        setSubmitStatus('error')
+      }
+    } catch (error) {
+      console.error('Form submission error:', error)
+      setSubmitStatus('error')
+    }
+
     setIsSubmitting(false)
-    setFormData({ name: '', email: '', subject: '', message: '' })
-
-    // Reset status after 5 seconds
     setTimeout(() => setSubmitStatus('idle'), 5000)
   }
 
   return (
     <>
+      {/* Hidden form for Netlify to detect */}
+      <form name="contact" netlify-honeypot="bot-field" data-netlify="true" hidden>
+        <input type="text" name="name" />
+        <input type="email" name="email" />
+        <input type="text" name="subject" />
+        <textarea name="message"></textarea>
+      </form>
+
       {/* Hero Section */}
       <section className="relative min-h-[50vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
@@ -192,7 +212,31 @@ export default function ContactPage() {
                 </motion.div>
               )}
 
-              <form onSubmit={handleSubmit} className="bg-white rounded-xl shadow-lg p-6">
+              {submitStatus === 'error' && (
+                <motion.div
+                  initial={{ opacity: 0, y: -10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  className="bg-red-50 border border-red-200 rounded-lg p-4 mb-6"
+                >
+                  <p className="text-red-600">Something went wrong. Please try again or email us directly.</p>
+                </motion.div>
+              )}
+
+              <form
+                name="contact"
+                method="POST"
+                data-netlify="true"
+                netlify-honeypot="bot-field"
+                onSubmit={handleSubmit}
+                className="bg-white rounded-xl shadow-lg p-6"
+              >
+                <input type="hidden" name="form-name" value="contact" />
+                <p className="hidden">
+                  <label>
+                    Don&apos;t fill this out if you&apos;re human: <input name="bot-field" />
+                  </label>
+                </p>
+
                 <div className="space-y-4">
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-1">

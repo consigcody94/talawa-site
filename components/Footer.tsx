@@ -124,7 +124,7 @@ export default function Footer() {
             <p className="text-gray-500 text-sm">
               Designed by{' '}
               <a
-                href="https://www.sentinelowl.org/web-dev"
+                href="https://sentinelowl.org/web-development/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-primary-gold hover:text-luxury-gold transition-colors"
