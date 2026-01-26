@@ -4,7 +4,7 @@ import './globals.css'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import LoadingScreen from '@/components/LoadingScreen'
-import HurricaneReliefButton from '@/components/HurricaneReliefButton'
+
 
 const poppins = Poppins({
   subsets: ['latin'],
@@ -61,7 +61,6 @@ export default function RootLayout({
           {children}
         </main>
         <Footer />
-        <HurricaneReliefButton />
       </body>
     </html>
   )
