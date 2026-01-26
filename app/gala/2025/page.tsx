@@ -13,7 +13,7 @@ export default function Gala2025Page() {
       <section className="relative min-h-[50vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
           <Image
-            src="/images/gala/20250308_193633.jpg"
+            src="/images/gala/20250308_193033.jpg"
             alt="Gala 2025 Background"
             fill
             className="object-cover"
