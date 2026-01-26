@@ -72,9 +72,9 @@ export default function GalaPage() {
               transition={{ delay: 0.7, duration: 0.8 }}
               className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-stretch sm:items-center"
             >
-              <button className="block w-full sm:inline-block text-center bg-gradient-to-r from-primary-gold to-yellow-400 hover:from-yellow-400 hover:to-primary-gold text-primary-black px-8 py-4 rounded-full font-bold text-lg transition-all shadow-2xl hover:shadow-primary-gold/50">
+              <a href="https://www.canadahelps.org/en/charities/taibu-community-health-centre/" target="_blank" rel="noopener noreferrer" className="block w-full sm:inline-block text-center bg-gradient-to-r from-primary-gold to-yellow-400 hover:from-yellow-400 hover:to-primary-gold text-primary-black px-8 py-4 rounded-full font-bold text-lg transition-all shadow-2xl hover:shadow-primary-gold/50">
                 Buy Tickets Now
-              </button>
+              </a>
               <Link
                 href="/gala/2025"
                 className="block w-full sm:inline-block text-center bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white border-2 border-white px-8 py-4 rounded-full font-bold text-lg transition-all hover:shadow-xl"
@@ -173,9 +173,9 @@ export default function GalaPage() {
                   Purchase your tickets early through CanadaHelps and receive a tax receipt for your donation
                 </p>
                 <div className="flex justify-center">
-                  <button className="bg-gradient-to-r from-primary-green to-earth-forest hover:from-earth-forest hover:to-primary-green text-white px-8 py-3 rounded-full font-bold text-lg shadow-lg hover:shadow-xl transition-all">
+                  <a href="https://www.canadahelps.org/en/charities/taibu-community-health-centre/" target="_blank" rel="noopener noreferrer" className="bg-gradient-to-r from-primary-green to-earth-forest hover:from-earth-forest hover:to-primary-green text-white px-8 py-3 rounded-full font-bold text-lg shadow-lg hover:shadow-xl transition-all">
                     How to Purchase Tickets
-                  </button>
+                  </a>
                 </div>
               </div>
             </div>
@@ -217,7 +217,7 @@ export default function GalaPage() {
                   <strong>Grade 1 – Grade 6</strong> (ages 6-12 years old)
                 </p>
                 <p className="text-base md:text-lg text-gray-700 leading-relaxed mb-4 italic text-lg md:text-xl font-semibold text-center py-4 border-y-2 border-primary-green">
-                  &quot;Every Child Can Learn<br/>Every Child Must Learn&quot;
+                  &quot;Every Child Can Learn<br />Every Child Must Learn&quot;
                 </p>
                 <p className="text-base md:text-lg text-gray-700 leading-relaxed">
                   Students from all Basic Schools and Infant Schools in the area attend Wait-A-Bit Primary, where they receive quality education and participate in enriching programmes.
@@ -319,9 +319,9 @@ export default function GalaPage() {
                 Purchase your tickets today and be part of an incredible evening that celebrates community and supports education for Black youth.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-stretch sm:items-center max-w-4xl mx-auto">
-                <button className="block w-full sm:inline-block text-center bg-primary-green hover:bg-earth-forest text-white px-8 py-4 rounded-full font-bold text-lg sm:text-xl transition-all shadow-2xl hover:shadow-xl">
+                <a href="https://www.canadahelps.org/en/charities/taibu-community-health-centre/" target="_blank" rel="noopener noreferrer" className="block w-full sm:inline-block text-center bg-primary-green hover:bg-earth-forest text-white px-8 py-4 rounded-full font-bold text-lg sm:text-xl transition-all shadow-2xl hover:shadow-xl">
                   Buy Tickets
-                </button>
+                </a>
                 <Link
                   href="/donate"
                   className="block w-full sm:inline-block text-center bg-white hover:bg-gray-100 text-primary-green border-2 border-primary-green px-8 py-4 rounded-full font-bold text-lg sm:text-xl transition-all shadow-xl"
