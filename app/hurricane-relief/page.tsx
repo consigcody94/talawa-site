@@ -314,16 +314,10 @@ export default function HurricaneReliefPage() {
                   <p className="text-gray-400">Early Childhood Education</p>
                 </div>
               </div>
-              <p className="text-gray-300 mb-4">
+              <p className="text-gray-300">
                 Roof damage, flooded classrooms, and destroyed learning materials have
                 forced the closure of this vital early childhood education center.
               </p>
-              <div className="bg-accent-sunset/20 rounded-lg p-4">
-                <p className="text-sm">
-                  <span className="font-semibold text-accent-sunset">Estimated repair cost:</span>
-                  <span className="text-white ml-2">$25,000+ CAD</span>
-                </p>
-              </div>
             </motion.div>
 
             <motion.div
@@ -342,16 +336,10 @@ export default function HurricaneReliefPage() {
                   <p className="text-gray-400">Primary Education</p>
                 </div>
               </div>
-              <p className="text-gray-300 mb-4">
+              <p className="text-gray-300">
                 Significant structural damage to buildings, loss of furniture, and
                 compromised electrical and water systems.
               </p>
-              <div className="bg-accent-sunset/20 rounded-lg p-4">
-                <p className="text-sm">
-                  <span className="font-semibold text-accent-sunset">Estimated repair cost:</span>
-                  <span className="text-white ml-2">$35,000+ CAD</span>
-                </p>
-              </div>
             </motion.div>
           </div>
         </div>
